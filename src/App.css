@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #E94560;
+  /* Brand Accent */
+  --primary-hover: #d23a54;
+  --bg-color: #F8FAFC;
+  /* Light Mode Background */
+  --surface-color: #FFFFFF;
+  /* Card Background */
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-light: #94A3B8;
+  --border-color: #E2E8F0;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.background {
+  background: var(--bg-color);
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f_flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Premium Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: #f8fafc;
+  transition: var(--transition);
+  font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+}
+
+button {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Base Buttons */
+.btn-primary {
+  background: var(--primary-color);
+  padding: 12px 32px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: var(--bg-color);
+  margin-left: 20px;
+  text-align: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.icon-circle:hover {
+  background: #e2e8f0;
+}
+
+/* Modern Card */
+.category {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 24px 16px;
+  width: 23%;
+}
+
+.category .box {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+
+.category .box:hover {
+  background-color: #f1f5f9;
+  transform: translateX(5px);
+  cursor: pointer;
+}
+
+.category img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.category span {
+  margin-left: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Headings & Text */
+.heading {
+  margin-bottom: 24px;
+}
+
+.heading h2,
+.text-gradient {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1E293B, #E94560);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Premium Product Cards */
+.product {
+  background: var(--surface-color);
+  padding: 20px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin: 10px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.product:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+  border-color: transparent;
+}
+
+.product h3 {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.product .rate i {
+  font-size: 14px;
+  color: #FBBF24;
+  margin-right: 4px;
+}
+
+.product .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: auto;
+  /* Push to bottom */
+}
+
+.price button {
+  background: none;
+  color: var(--primary-color);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* Discount Badge */
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--primary-color);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  color: #fff;
+  z-index: 2;
+}
+
+.product-like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product:hover .product-like {
+  opacity: 1;
+}
+
+.product-like label {
+  background-color: rgba(15, 52, 96, 0.9);
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  border-radius: var(--radius-full);
+  text-align: center;
+}
+
+.product-like i {
+  font-size: 18px;
+  color: var(--text-light);
+  cursor: pointer;
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.product-like i:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Controls */
+.control-btn .next,
+.control-btn .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: var(--surface-color);
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+}
+
+.control-btn .prev {
+  left: -15px;
+}
+
+.control-btn .next {
+  right: -15px;
+}
+
+.control-btn .prev i,
+.control-btn .next i {
+  color: var(--text-primary);
+}
+
+.control-btn .prev:hover,
+.control-btn .next:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.control-btn .prev:hover i,
+.control-btn .next:hover i {
+  color: white;
+}
+
+/* Responsive utilities */
+@media (max-width: 1024px) {
+  .category {
+    width: 30%;
+  }
+
+  .contentWidth {
+    width: 68%;
+  }
+}
+
+@media (max-width: 768px) {
+  .d_flex {
+    flex-direction: column;
+  }
+
+  .category {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .contentWidth {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
